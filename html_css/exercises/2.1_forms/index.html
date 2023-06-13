@@ -3,9 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1.4_first_web_page</title>
+    <style>
+        ::placeholder {color: black;}        
+        form { width: fit-content;}
+        textarea { margin-right: 4em;}
+    </style>        
 </head>
 <body>
-    
+<form action="" method="get" >
+    <fieldset>                
+            <h1>Create an Account</h1>
+    <p>
+        <label for="Email">Email:</label><br>    
+        <input type="email" name="email" id="email" required>
+    </p>
+    <p>
+        <label for="Password">Password:</label><br>    
+        <input type="password" name="password" id="password" required>
+    </p>
+    <p>
+        <label for="age">Age:</label><br>    
+        <select name="age" id="age">
+            <option>Select Age</option>
+            <option value=" ">18-34</option>
+            <option value="35-49">35-49</option>
+            <option value="50-120">50-120</option>
+        </select>        
+    </p>
+    <p>
+        <label for="about">Tall us about yourself:</label><br>    
+        <textarea name="about" id="about" cols="50" rows="5"></textarea>
+    </p>
+   <p>
+    <input type="checkbox">
+    <label for="agreement">I agree to the <a href="www.placehoilder.com" target="_blank">terms of service</a></label><br>    
+   </p>
+   <input type="submit" id="submit" value="Sign Up">
+   <br>
+</fieldset>
+</form>
+    </body>
 </body>
 </html>
