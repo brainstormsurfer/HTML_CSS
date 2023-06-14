@@ -3,9 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>5.2_card</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container {      
+      width: 960px;
+      margin: 50px auto;
+      font-family: Arial, Helvetica, sans-serif;   
+      /* padding-bottom: 25px; */
+      text-align: center;
+      box-shadow: 1px 20px 100px 1px #333;
+      background-color: rgb(248, 247, 247);
+    }    
+    img {            
+      /* display: block;  -> img is an inline element*/
+      border-radius: 25px;
+      width: 400px;
+      height: 600px;      
+    }
+    menu {
+      list-style: none;
+    }
+    h1 {
+      padding: 10px;
+    }
+    h1 {
+      text-align: center;      
+      text-decoration: underline;
+    }
+    ul {
+      text-align: start;      
+    }  
+    li {
+      margin: 10px;
+      /* width: calc(100% / 4);  */      
+    }
+    button {
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 15px;
+    }
+    button:hover {
+      background-color: aquamarine;
+    }
+    button:active {
+      background-color: rgb(255, 127, 127);
+    }
+    .box-img {
+      background-color: black;
+    }
+    .box-text {
+      text-align: start;      
+      padding: 0 15px 25px;
+      background-color: #e3e2e0;
+    }
+    menu {
+      padding-top: 20px;
+    }
+    .right {
+      text-align: start;
+      width: 50%;
+      float: right;
+    }
+    .left {
+      text-align: end;      
+      width: 50%;      
+      float: left;
+    }    
+    .clr {
+      clear: both;
+    }
+    hr {
+      margin: 15px;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="container">          
+    <div class="box-img">
+    <img src="../src/img/eye.jpg" alt="mountains">
+  </div>
+  <div class="box-text">
+    <h1>The Eye</h1> 
+    <br>
+    <h2>Your journey have brought you here...</h2>
+    <br>
+    <h4>In front of you, an enormous legendary entity called "The Eye".</h4>
+    <h4>A living teleport to another dimension organism with a cosmic mysterious liquid waterfall</h4>
+    <hr>
+    <h3> Choose your next move :</h3>  
+  <menu>
+    <div class="left">
+      <li><button>Running away</button></li>
+      <li><button>Try to communicate with The Eye</button></li>
+    </div>
+    <div class="right">
+      <li><button>Taste the cosmic waterfall's liquid</button></li>
+      <li><button>Wondering around to explore the area</button></li=>
+    </div>
+      <div class="clr"></div>
+  </menu>
+  </div>
+</div>
 </body>
 </html>
