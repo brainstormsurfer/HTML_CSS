@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.1_float_layout</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        padding-top: 5px;
+    }
+    .header, .main, .side, .footer {
+        border: 1px solid black;       
+        margin-top: 5px;
+    }
+    .header {  
+        text-align: center;      
+        height: calc(15%);
+        background-color: rgb(255, 179, 27);
+    }
+    .side {
+        text-align: start;
+        height: calc(63%);
+        float: left;
+        width: 25%;
+        background-color: rgb(24, 124, 24);
+    }
+    .main {
+        text-align: end;
+        height: calc(63%);
+        width: 74%;
+        float: right;
+        background-color: rgb(145, 44, 145);
+    }
+    .clr {
+        clear: both;
+    }
+    .footer {
+        text-align: center;
+        height: calc(15%);
+        background-color: rgb(43, 79, 221);
+    }
+    .container {
+        width: 70%;
+        height: calc(300px);       
+        margin: 5px auto;
+        padding: 0 5px;
+    }
+    p {
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header"> <p> Header</p></div>
+            <div class="side"> <p> Side</p></div>
+            <div class="main"> <p> Main</p></div>        
+            <div class="clr"></div>
+            <div class="footer"> <p> Footer</p></div>
+    </div>
+</body>
+</html>

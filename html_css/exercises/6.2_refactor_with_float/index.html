@@ -1,11 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>6.2_refactor_with_float</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0245c45241.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>5.3_refactor_with_styling</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+      :root {
+        --main-font-color: greenyellow;         
+        --box-color: #00c3ff;
+        --hover-color: #ea00ff; 
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main-font-color);
+      }
+
+      main {
+        height: 500px;
+      }
+
+      .bg-container {
+        min-width: 780px;
+      }
+
+      .bg-container::before {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../src/img/treeisland.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(90%);
+        z-index: -1;
+      }
+
+      div,
+      header,
+      main,
+      footer {
+        padding: 1.5em;
+      }
+
+      .sp_primary {
+        color: var(--box-color);
+      }
+      .sp_secondary {
+        color: var(--hover-color);
+      }
+
+      .right {
+        float: right;
+        top: 0;
+        right: 0;
+        height: 400px;
+        width: 35%;
+      }
+      .left {
+        position: relative;
+        border-radius: 25px;
+        float: left;
+        font-size: 1.2em;
+        top: 0px;
+        left: 0;
+        width: 60%;
+        height: 400px;
+        box-shadow: inset 0px 0px 65px var(--box-color);
+        padding: 3em;
+      }
+      .left:hover {
+        box-shadow: inset 0px 0px 65px var(--hover-color);
+      }
+
+      .hr {
+        margin: 10px;
+        color: var(--hover-color);
+      }
+      #img_desc_bg {
+        margin-top: 15px;
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 55px var(--box-color);
+        height: 100px;
+      }
+      #img_desc_bg:hover {
+        box-shadow: inset 0px 0px 55px var(--hover-color);
+      }
+
+      #img_hero {
+        width: 250px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px;
+      }
+
+      #img_hero:hover {
+        width: 250px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px;
+      }
+
+      footer {
+        border-radius: 25px;
+        font-size: 1.15em;
+        box-shadow: inset 0px 0px 85px var(--box-color);
+      }
+      footer:hover {
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 85px var(--hover-color);
+      }
+
+      footer,
+      i {
+        margin: 10px;
+        color: var(--main-font-color);
+
+      }
+      i:hover {
+        margin: 10px;
+        color: var(--hover-color);
+      }
+      i:active {
+        margin: 10px;
+        color: var(--box-color);
+      }
+      footer li {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-container">
+      <div id="about">
+        <h1>- Portfolio -</h1>
+        <p>( test page )</p>
+
+        <h2>My name is <span class="sp_primary">Ran</span></h2>
+        <h3>
+          I'm a <span class="sp_secondary">web development </span>student at
+          <span class="sp_secondary">Appleseeds</span>
+        </h3>
+      </div>
+      <main>
+        <div class="left">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Et harum
+            distinctio molestiae cum quas est ab sint ipsam doloribus ipsum
+            similique, tempora corrupti labore corporis necessitatibus ullam
+            magni illum architecto hic voluptatum eum, neque repellat laudantium
+            voluptatem? In perspiciatis consequuntur minus cum rem vitae
+            laboriosam dolorem dolores, ipsum assumenda aliquid.
+          </p>
+        </div>
+        <div class="right">
+          <img
+            id="img_hero"
+            src="../src/img/hero.jpg"
+            alt="My Secret Identity"
+            title="My Secret Identity"
+          />
+          <div id="img_desc_bg">
+            <h4 id="img_desc">
+              Me, every once in a Full Moon, around Midnight...
+            </h4>
+          </div>
+        </div>
+        <br />
+      </main>
+      <hr class="hr" />
+      <footer id="social">
+        <p>
+          I don't have much presence on social networks. <br />
+          I do own quite of a dormant account at (only) one of the following
+          platforms, <br />
+          You have only one try to guess which :
+        </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100008374987211"
+              target="_blank"
+            >
+              <i class="fa-brands fa-facebook fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com" target="_blank">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com" target="_blank">
+              <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
 </html>
