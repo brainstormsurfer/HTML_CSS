@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7.1_buttons</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: rgb(22, 65, 105);
+    }
+    body {
+        padding: 20px;
+    }
+    .container {
+      text-align: center;          
+      height: 100vh;
+      width: 70%;
+      margin: 0 auto;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+    }
+    .box {
+      display: inline-block;
+      height: 21%;
+      width: 50%;
+      margin-top: 20px;
+      min-width: max-content;
+    }
+
+    .box-inner {
+      height: max-content;
+      margin-top: 30px;
+    }
+    h1 {
+      font-weight: lighter;
+    }
+    button {
+      color: #fff;
+      padding: 8px;
+      margin: 0px 50px;
+    }
+    .register {
+      font-size: 1.1em;
+      padding: 15px;
+      width: 100px;
+    }
+
+    .flat .register {
+      background-color: rgb(0, 81, 255);
+      border: none;
+    }
+    .flat .register:hover {
+      background-color: rgb(0, 59, 186);
+    }
+    .flat .submit {
+      background-color: rgb(228, 161, 3);
+      border: none;
+    }
+    .flat .submit:hover {
+      background-color: rgb(165, 118, 9);
+    }
+    .round .register {
+      background-color: rgb(7, 180, 94);
+      border-radius: 25px;
+      border: none;
+    }
+    .round .register:hover {
+      background-color: rgb(6, 121, 64);
+    }
+    .round .submit {
+      background-color: rgb(244, 31, 116);
+      border-radius: 25px;
+      border: none;
+    }
+    .round .submit:hover {
+      background-color: rgb(163, 8, 70);
+    }
+    .flat.ghost .register {
+      border: 1px solid rgb(255, 64, 0);
+      background-color: transparent;
+    }
+    .flat.ghost .register:hover {
+      background-color: rgb(255, 64, 0);
+    }
+    .flat.ghost .submit {
+      border: 1px solid rgb(166, 0, 255);
+      background-color: transparent;
+    }
+    .flat.ghost .submit:hover {
+      background-color: rgb(166, 0, 255);
+    }
+    .round.ghost .register {
+      border: 1px solid rgb(255, 204, 0);
+      background-color: transparent;
+      border-radius: 50px;
+    }
+    .round.ghost .register:hover {
+      background-color: rgb(255, 204, 0);
+    }
+    .round.ghost .submit {
+      border: 1px solid rgb(0, 255, 145);
+      background-color: transparent;
+      border-radius: 50px;
+    }
+    .round.ghost .submit:hover {
+      background-color: rgb(0, 255, 145);
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box flat">
+        <h1>Flat</h1>
+        <div class="box-inner">
+          <button class="register">Register</button>
+          <button class="submit">Submit</button>
+        </div>
+      </div>
+      <div class="box round">
+        <h1>Flat Round</h1>
+        <div class="box-inner">
+          <button class="register">Register</button>
+          <button class="submit">Submit</button>
+        </div>
+      </div>
+      <div class="box flat ghost">
+        <h1>Flat Ghost</h1>
+        <div class="box-inner">
+          <button class="register">Register</button>
+          <button id="ghost" class="submit">Submit</button>
+        </div>
+      </div>
+      <div class="box round ghost">
+        <h1>Round Ghost</h1>
+        <div class="box-inner">
+          <button class="register">Register</button>
+          <button class="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
