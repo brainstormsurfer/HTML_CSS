@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8.3_positioning</title>
+  </head>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+        position: relative;
+        width: 100%;
+        margin: 100px auto;
+        padding: 20px;
+    }
+    div {
+        border: 2px solid black;
+        background-color: white;
+    }
+    #one {
+        position:absolute;
+        width: 200px;
+        height: 170px;
+    }
+    #two {
+        position:absolute;
+        width: 160px;
+        height: 170px;
+        top: 120px;
+        left: 120px;        
+        z-index: 2;
+    }
+    #three {
+        position:absolute;
+        width: 418px;
+        height: 110px;
+        top: 250px; 
+        z-index: 3;
+    }
+    #four {
+        position:absolute;
+        width: 80px;
+        height: 405px;
+        left:340px;
+        z-index: 4;
+    }
+
+  
+  </style>
+  <body>
+        <div id="one"></div>
+        <div id="two">div two</div>
+        <div id="three">div three</div>
+        <div id="four">div four</div>
+  </body>
+</html>
