@@ -24,7 +24,7 @@
         box-sizing: border-box;
         text-align: center;
         color: var(--main-font-color);
-        border: solid red 0.5px;
+        /* border: 0.5px red solid; */
       }
 
       nav {
@@ -33,7 +33,7 @@
         height: 90px;
         overflow: hidden;
         z-index: 1;
-        box-shadow: inset 0px 0px 100px 0px #000;
+        box-shadow: inset 0px 0px 100px 0px #000;        
       }
 
       nav button {
@@ -62,14 +62,19 @@
       .left-menu {
         float: left;
         text-align: start;
-        width: 20%;
+        width: 50%;
       }
+      /* .left-menu button:active {
+        box-shadow: 0px 0px 15px 2px rgb(255, 0, 221);
+        color: var(--box-color);
+      } */
 
       .right-menu {
         float: right;
         text-align: end;
-        width: 40%;
+        width: 50%;
       }
+      
 
       ul {
         list-style: none;
@@ -90,9 +95,15 @@
 
       .bg-container {
         width: 100%;
-        min-width: fit-content;
+        min-width: 50%;
+        /* margin: 0 auto; */
+
       }
 
+      /* button {
+        margin: 10px;
+      } */
+      
       .bg-container::before {
         position: fixed;
         content: "";
@@ -110,72 +121,103 @@
       main {
         width: 100%;
         display: inline-block;
-        text-align: center;
-        min-width: min-content;
+        /* height: 80%; */
+        /* margin-top: 50px; */
+        text-align: center;        
       }
 
       .hero {
         display: inline-block;
-        width: 50%;        
-        min-width: min-content;
-        vertical-align: middle;
+        width:50%;
+        min-width: 350px;
+        padding: 10px;
       }
+
+
+      .hero #h3-img_desc {
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 55px var(--box-color);
+        height: 80px;        
+        width: 60%;
+        padding: 1em;
+        min-width: 350px;    
+        margin: 10px auto;
+        /* overflow: hidden; */
+      }
+
+      #h3-img_desc:hover {
+        box-shadow: inset 0px 0px 55px var(--hover-color);
+      }
+      #h3-img_desc:active {        
+        box-shadow: 0px 0px 20px 10px var(--main-font-color);
+
+         }
+
+      /* #h3-img_desc:active {        
+        background-color: #bc0ecb;
+        box-shadow: inset 0px 0px 55px 0px var(--box-color);
+         } */
 
       #img_hero {
         width: 350px;
         border-radius: 50%;
         box-shadow: 0px 0px 10px 10px var(--main-font-color);
-        margin: 10px 0 10px;
-        max-width: min-content;
+        margin: 10px 0 20px;
       }
 
       #img_hero:active {
         box-shadow: 0px 0px 40px 10px rgb(255, 0, 221);
       }
 
-      .hero #h3-img_desc {
-        border-radius: 25px;
-        box-shadow: inset 0px 0px 55px var(--box-color);
-        height: 80px;
-        width: 60%;
-        padding: 1em;
-        min-width: 350px;
-        margin: 10px auto;
-      }
-
-      #h3-img_desc:hover {
-        box-shadow: inset 0px 0px 55px var(--hover-color);
-      }
-
       .about {
         display: inline-block;
-        border-radius: 25px;
+        border-radius: 25px;        
         font-size: 1.2em;
         width: 45%;
         min-width: 350px;
-        vertical-align: middle;
-        margin: 0 30px;
+        height: fit-content;
         min-height: max-content;
         box-shadow: inset 0px 0px 65px var(--box-color);
         padding: 1em;
-        max-width: 100%;
+        /* margin: 1em auto; */
+        /* overflow: hidden; */
       }
 
       .about:hover {
         box-shadow: inset 0px 0px 65px var(--hover-color);
       }
+     
+      .about:active {
+
+    }
+     
 
       .about p {
         width: 100%;
+        /* min-width: 350px; */
+        /* height: 90px;         */
+        /* margin: 10px; */
       }
 
       .hr {
-        margin: 30px;
+        margin: 50px;
         color: var(--hover-color);
       }
 
+      footer {
+        margin: 20px 40px;
+        height: min-content;
+        min-width: 200px;
+        padding: 20px;
+        border-radius: 25px;
+        font-size: 1.1em;
+        box-shadow: inset 0px 0px 85px var(--box-color);
+      }
+
       footer p {
-        max-width: 100%;
+        width: 100%;
+        height: min-content;          
+        min-height: max-content;
       }
 
       footer:hover {
@@ -183,12 +225,10 @@
         box-shadow: inset 0px 0px 85px var(--hover-color);
       }
       footer ul {
-        max-width: 100%;
-        margin-top: 15px;
+        margin-top:15px;
       }
-      i {
-        margin: 10px 15px;
-
+      i {      
+        margin: 10px 25px;
         color: var(--main-font-color);
       }
 
@@ -199,19 +239,8 @@
         color: var(--box-color);
       }
       footer li {
-        display: inline-block;
-        max-width: 100%;
+        display: inline;
       }
-
-      footer {    
-        text-align: center;
-        padding: 20px;
-        border-radius: 25px;
-        box-shadow: inset 0px 0px 85px var(--box-color);
-        width: calc(max(100% - 10%));
-        margin: 20px auto;
-      }
-
     </style>
   </head>
   <body>
@@ -256,9 +285,9 @@
             alt="My Secret Identity"
             title="My Secret Identity"
           />
-          <h3 id="h3-img_desc">
-            Me, once in a every full moon, around midnight...
-          </h3>
+            <h3 id="h3-img_desc">
+              Me, once in a every full moon, around midnight...
+            </h3>
         </div>
         <div class="about">
           <p>
@@ -280,7 +309,7 @@
             >..
           </p>
         </div>
-
+        
         <br />
       </main>
     </div>
@@ -288,9 +317,10 @@
 
     <footer id="social">
       <p>
-        I don't have much presence on social networks. I do own quite of a
-        dormant account at (only) one of the following platforms, Guess which
-        within a single try :
+        I don't have much presence on social networks.
+        I do own quite of a dormant account at (only) one of the following
+        platforms,
+        You have only one try to guess which :
       </p>
       <ul>
         <li>
