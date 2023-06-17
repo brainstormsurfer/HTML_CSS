@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8.1_positioning</title>
+</head>
+<style>
+    /* 
+        1. child with absolute position located at the 0 top left spot of its parent,
+        but only if the position of the parent set to 'relative'.
+        In the example, since outer's position doesn't set to relative, 
+        The absolute-positioned-child doesn't get affected by the margin property of its parent.        
+    */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+
+    }
+
+    #outer {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        margin: 50px auto;
+        background-color: rgb(46, 130, 100);
+    }
+    #inner {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 10px;
+        background-color: rgb(103, 217, 158);
+    }
+</style>
+<body>
+    <div id="outer">
+        <div id="inner">            
+        </div>
+    </div>
+</body>
+</html>
