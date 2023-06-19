@@ -13,8 +13,8 @@
 
       :root {
         --main-font-color: greenyellow;
-        --box-color: #00c3ff;
-        --hover-color: #ea00ff;
+        --box-primary-color: #00c3ff;
+        --box-hover-color: #ea00ff;
       }
 
       * {
@@ -24,16 +24,27 @@
         box-sizing: border-box;
         text-align: center;
         color: var(--main-font-color);
-        border: solid red 0.5px;
       }
 
       nav {
         position: sticky;
         top: 0;
-        height: 90px;
+        height: 80px;
         overflow: hidden;
-        z-index: 1;
+        z-index: 1;        
         box-shadow: inset 0px 0px 100px 0px #000;
+      }
+
+      .left-menu {
+        float: left;
+        text-align: start;
+        width: 40%;
+      }
+
+      .right-menu {
+        float: right;
+        text-align: end;
+        width: 40%;
       }
 
       nav button {
@@ -41,7 +52,7 @@
         background-color: transparent;
         border-radius: 25px 5px;
         padding: 20px 25px;
-        box-shadow: inset 0px 0px 20px 0px var(--box-color);
+        box-shadow: inset 0px 0px 20px 0px var(--box-primary-color);
         font-weight: bolder;
         margin: 15px;
       }
@@ -52,23 +63,11 @@
 
       nav button:hover {
         border-radius: 5px 25px;
-        box-shadow: inset 0px 0px 22px 0px var(--hover-color);
+        box-shadow: inset 0px 0px 22px 0px var(--box-hover-color);
       }
 
       nav button:active {
         box-shadow: 0px 0px 10px 2px var(--main-font-color);
-      }
-
-      .left-menu {
-        float: left;
-        text-align: start;
-        width: 20%;
-      }
-
-      .right-menu {
-        float: right;
-        text-align: end;
-        width: 40%;
       }
 
       ul {
@@ -81,15 +80,16 @@
       }
 
       .sp_primary {
-        color: var(--box-color);
+        color: var(--box-primary-color);
       }
 
       .sp_secondary {
-        color: var(--hover-color);
+        color: var(--box-hover-color);
       }
 
       .bg-container {
         width: 100%;
+        padding-top: 10px;
         min-width: fit-content;
       }
 
@@ -110,13 +110,13 @@
       main {
         width: 100%;
         display: inline-block;
-        text-align: center;
-        min-width: min-content;
+        text-align: center;        
+        padding: 20px;
       }
 
       .hero {
         display: inline-block;
-        width: 50%;        
+        width: 40%;        
         min-width: min-content;
         vertical-align: middle;
       }
@@ -129,13 +129,9 @@
         max-width: min-content;
       }
 
-      #img_hero:active {
-        box-shadow: 0px 0px 40px 10px rgb(255, 0, 221);
-      }
-
       .hero #h3-img_desc {
         border-radius: 25px;
-        box-shadow: inset 0px 0px 55px var(--box-color);
+        box-shadow: inset 0px 0px 55px var(--box-primary-color);
         height: 80px;
         width: 60%;
         padding: 1em;
@@ -144,34 +140,76 @@
       }
 
       #h3-img_desc:hover {
-        box-shadow: inset 0px 0px 55px var(--hover-color);
+        box-shadow: inset 0px 0px 55px var(--box-hover-color);
       }
 
-      .about {
+      .about {          
         display: inline-block;
         border-radius: 25px;
         font-size: 1.2em;
-        width: 45%;
+        width: 45%;              
         min-width: 350px;
-        vertical-align: middle;
-        margin: 0 30px;
+        vertical-align: middle;        
         min-height: max-content;
-        box-shadow: inset 0px 0px 65px var(--box-color);
         padding: 1em;
-        max-width: 100%;
+      }
+
+      .about, .about-adams {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+      }
+      
+       .about-adams {     
+        margin-top: 30px;
+        width: 100%;
+        min-width: 150px;
+        padding: 10px;        
       }
 
       .about:hover {
-        box-shadow: inset 0px 0px 65px var(--hover-color);
+        box-shadow: inset 0px 0px 65px var(--box-hover-color);
+      }
+
+      .about-adams:hover {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+      }
+      
+      .about:active {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+      }
+
+      .about-adams:active {
+        box-shadow: inset 0px 0px 65px var(--box-hover-color);
       }
 
       .about p {
         width: 100%;
+        display: inline-block;
+        margin-top: 10px;
+        z-index: 1;
+      }
+
+      .sp-adams {
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 40px 10px transparent;
+      }
+      
+      #img_hero:active { 
+        box-shadow: 0px 0px 15px 15px rgb(255, 0, 0);
+      }
+      
+      .sp-adams:hover  { 
+        position: relative;
+        padding: 15px;
+        box-shadow: 0px 0px 40px 20px rgb(255, 0, 0);
+        color: red;
+        font-weight: bold;
+        font-size: 26px;
+        border-radius: 50%;        
       }
 
       .hr {
         margin: 30px;
-        color: var(--hover-color);
+        color: var(--box-hover-color);
       }
 
       footer p {
@@ -180,7 +218,7 @@
 
       footer:hover {
         border-radius: 25px;
-        box-shadow: inset 0px 0px 85px var(--hover-color);
+        box-shadow: inset 0px 0px 85px var(--box-hover-color);
       }
       footer ul {
         max-width: 100%;
@@ -193,10 +231,10 @@
       }
 
       i:hover {
-        color: var(--hover-color);
+        color: var(--box-hover-color);
       }
       i:active {
-        color: var(--box-color);
+        color: var(--box-primary-color);
       }
       footer li {
         display: inline-block;
@@ -207,8 +245,8 @@
         text-align: center;
         padding: 20px;
         border-radius: 25px;
-        box-shadow: inset 0px 0px 85px var(--box-color);
-        width: calc(max(100% - 10%));
+        box-shadow: inset 0px 0px 85px var(--box-primary-color);
+        width: calc(max(100% - 20%, 350px));
         margin: 20px auto;
       }
 
@@ -261,7 +299,7 @@
           </h3>
         </div>
         <div class="about">
-          <p>
+          <p >
             Lorem ipsum dolor sit amet consectetur adipisicing clouds elit. Et
             harum distinctio
             <span class="sp_primary"> passionate </span> molestiae cum quas est
@@ -277,9 +315,17 @@
             <span class="sp_primary"> sacrifice </span> dolores, ipsum assumenda
             aliquid Lorem ipsum dolor sit amet<span class="sp_secondary">
               professional </span
-            >..
+            >. Lorem ipsum dolor sit amet consectetur.
           </p>
+          <div class="about about-adams">
+            <p >             
+              Recusandae praesentium doloremque alias quidem. <span class="sp-adams">Don't</span> 
+                architecto? Rerum, quam? In perspiciatis  <span class="sp-adams">Panic</span> minus dolorem.
+               Laborum nulla eveniet Lorem ipsum dolor sit amet. repellendus modi magnam ea?.
+            </p>
+          </div>
         </div>
+       
 
         <br />
       </main>
@@ -293,25 +339,25 @@
         within a single try :
       </p>
       <ul>
-        <li>
-          <i class="fa-brands fa-facebook fa-2x">
+        <li>      
             <a
-              href="https://www.facebook.com/profile.php?id=100008374987211"
-              target="_blank"
-            >
+              href="https://www.facebook.com/profile.php?id=100008374987211&mibextid=ZbWKwL"
+              target="_blank">
+            <i class="fa-brands fa-facebook fa-2x"></i>
             </a>
-          </i>
         </li>
-        <li>
-          <i class="fa-brands fa-linkedin fa-2x"
-            ><a href="https://www.linkedin.com"></a
-          ></i>
+        <li>      
+            <a
+            href="https://www.instegram.com/" target="_blank">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+            </a>
         </li>
-        <li>
-          <i class="fa-brands fa-instagram fa-2x"
-            ><a href="https://www.instagram.com" target="_blank"></a
-          ></i>
-        </li>
+        <li>      
+            <a
+            href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+        </li>    
       </ul>
     </footer>
   </body>
