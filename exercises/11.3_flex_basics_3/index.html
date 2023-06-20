@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>11.1_flex_basics_1</title>
+    <title>11.3_flex_basics_3</title>
   </head>
   <style>
 
@@ -12,7 +12,9 @@
         padding: 0;
         box-sizing: border-box;
     }
-
+    body {
+      display: flex;
+    }
     .container {
         background-color: rgb(244, 246, 206);
         margin: 30px auto;
@@ -20,11 +22,12 @@
         min-width: max-content;
         height: 400px;    
         display: flex;
-        justify-content:space-between;
+        justify-content:flex-end;
+        align-items: end;
     }
     div {
         width: 150px;
-        height: 27%;
+        height: 23%;
     }
     .box1 {
         background-color: rgb(54, 113, 37)
