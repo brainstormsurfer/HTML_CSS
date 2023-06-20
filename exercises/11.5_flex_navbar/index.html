@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11.5_flex_navbar</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    nav {
+        background-color: rgb(228, 231, 234);
+        font-family: Arial, Helvetica, sans-serif;        
+        color: rgb(34, 41, 92);
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;    
+    }
+
+    ul {
+        list-style: none;
+        padding: 15px;
+    }
+
+    .left, li {
+        display: inline;
+        height: 50px;
+        font-weight: bolder;
+        line-height: 1.2;
+        text-align: center;
+        padding: 15px;
+        border-left: .25px solid rgba(34, 41, 92, 0.448);
+    }
+
+    .left {
+        font-size: 1.2em;
+        font-weight: bold;
+        border-left: none;
+    }
+    
+    @media only screen and (max-width: 650px) {
+        nav {
+            height: fit-content;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .left, li {
+            display: flex;
+            justify-content: center;
+            height: 50px;
+            width: 100%;
+            min-width: 300px;
+        }
+        
+        ul {
+            padding: 10px;
+        }
+
+        li {
+            border-left: none;
+            border-bottom: .25px solid rgba(34, 41, 92, 0.448);
+        }
+    }
+
+</style>
+<body>
+    <nav>
+        <div class="left">APPLESEEDS</div>    
+        <ul>            
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>PORTFOLIO</li>
+            <li>CONTACT</li>
+        </ul>
+    </nav>
+</body>
+</html>
