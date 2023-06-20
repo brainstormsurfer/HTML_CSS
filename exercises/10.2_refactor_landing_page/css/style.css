@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --main-font-color: greenyellow;         
+  --box-color: #00c3ff;
+  --hover-color: #ea00ff; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  text-align: center;
+  color: var(--main-font-color);
+}
+
+main {
+  height: 500px;
+}
+
+.bg-container {
+  min-width: 780px;
+}
+
+.bg-container::before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../src/img/treeisland.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(90%);
+  z-index: -1;
+}
+
+div,
+header,
+main,
+footer {
+  padding: 1.5em;
+}
+
+.sp_primary {
+  color: var(--box-color);
+}
+.sp_secondary {
+  color: var(--hover-color);
+}
+
+.right {
+  float: right;
+  top: 0;
+  right: 0;
+  height: 400px;
+  width: 35%;
+}
+.left {
+  position: relative;
+  border-radius: 25px;
+  float: left;
+  font-size: 1.2em;
+  top: 0px;
+  left: 0;
+  width: 60%;
+  height: 400px;
+  box-shadow: inset 0px 0px 65px var(--box-color);
+  padding: 3em;
+}
+.left:hover {
+  box-shadow: inset 0px 0px 65px var(--hover-color);
+}
+
+.hr {
+  margin: 10px;
+  color: var(--hover-color);
+}
+#img_desc_bg {
+  margin-top: 15px;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 55px var(--box-color);
+  height: 100px;
+}
+#img_desc_bg:hover {
+  box-shadow: inset 0px 0px 55px var(--hover-color);
+}
+
+#img_hero {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px;
+}
+
+#img_hero:hover {
+  width: 250px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 10px;
+}
+
+footer {
+  border-radius: 25px;
+  font-size: 1.15em;
+  box-shadow: inset 0px 0px 85px var(--box-color);
+}
+footer:hover {
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 85px var(--hover-color);
+}
+
+footer,
+i {
+  margin: 10px;
+  color: var(--main-font-color);
+
+}
+i:hover {
+  margin: 10px;
+  color: var(--hover-color);
+}
+i:active {
+  margin: 10px;
+  color: var(--box-color);
+}
+footer li {
+  display: inline;
+}
