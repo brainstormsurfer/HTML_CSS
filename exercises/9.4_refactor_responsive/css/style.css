@@ -15,7 +15,7 @@
   color: var(--main-font-color);
 }
 
-nav {
+.nav {
   position: sticky;
   top: 0;
   height: 80px;
@@ -37,7 +37,7 @@ nav {
   width: 70%;
 }
 
-nav button {
+.nav button {
   font-family: Arial, Helvetica, sans-serif;
   background-color: transparent;
   border-radius: 25px 5px;
@@ -47,16 +47,18 @@ nav button {
   margin: 15px;
 }
 
-nav .left-menu button {
-  padding: 20px 55px;
+.nav .left-menu button {
+  padding: 25px 5px;
+  height: 100%;
+  width: 50%;
 }
 
-nav button:hover {
+.nav button:hover {
   border-radius: 5px 25px;
   box-shadow: inset 0px 0px 22px 0px var(--box-hover-color);
 }
 
-nav button:active {
+.nav button:active {
   box-shadow: 0px 0px 10px 2px var(--main-font-color);
 }
 
@@ -105,7 +107,7 @@ main {
 }
 
 .hero {
-  display: inline-block;
+  float:left;
   width: 40%;
   min-width: min-content;
   vertical-align: middle;
@@ -134,7 +136,7 @@ main {
 }
 
 .about {
-  display: inline-block;
+  float: right;
   border-radius: 25px;
   font-size: 1.2em;
   width: 45%;
@@ -240,79 +242,66 @@ footer {
   width: calc(max(100% - 20%, 350px));
   margin: 20px auto;
 }
-
 /* --- MEDIA QUERIES --- */
 
 /* Smartphone */
 
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   * {
     font: 0.5rem;
+    border: 1px red solid;
   }
 
-  nav {
-    display: block;
-    position: static;
-    height: max-content;
+  .nav {
+    display: block; 
+    position: static;     
+    height: min-content;
+  }
+
+  .left-menu, .right-menu {
+    display: block;    
+    float: none;
+    text-align: center;
+    width: 100%; 
   }
 
   .left-menu {
-    display: block;
-    float: none;
-    text-align: center;
-    width: 100%;
     box-shadow: inset 0px 0px 10px 2px var(--main-font-color);
+    margin: 0 auto;  
+    height: 80px;     
   }
 
-  .right-menu {
-    margin: 0 auto;
-    display: block;
-    float: none;
-    width: 100%;
+  .right-menu li {  
+    padding: 1em;
   }
 
-  .right-menu li {
-    height: 50px;
-  }
-
-  nav button {
+  .nav button {
     font-family: Arial, Helvetica, sans-serif;
     background-color: transparent;
     border-radius: 25px 5px; /* padding: 20px; */
     box-shadow: inset 0px 0px 20px 0px var(--box-primary-color);
     font-weight: bolder;
     width: 60%;
-    height: 25px;
     line-height: 0.5em;
     margin: 5px;
   }
 
-  .left-menu button {
-    margin: 10px;
-    height: 25px;
+  .nav .left-menu button {    
+    width: 60%;
+    height: 10px;
+    margin: 10px 0;
     box-shadow: inset 0px 0px 22px 0px var(--box-hover-color);
-  }
-
-  nav button:hover {
-    border-radius: 5px 25px;
-    box-shadow: inset 0px 0px 22px 0px var(--box-hover-color);
-  }
-
-  nav button:active {
+  } 
+   .nav button:active {
     box-shadow: 0px 0px 10px 2px var(--main-font-color);
     width: 60%;
-  }
+  } 
 
-  nav ul {
-    display: block;
+  .nav ul li { 
     width: 100%;
-    list-style: none;
-  }
-
-  nav ul li {
+    height: max-content;
+    padding: 5px;
     display: block;
-    width: 100%;
-    height: 60px;
     border-bottom: var(--main-font-color);
   }
 
@@ -350,7 +339,7 @@ footer {
     max-width: min-content;
   }
 
-  #img_hero :active {
+  #img_hero:active {
     border-radius: 55px 10px;
     box-shadow: 0px 0px 15px 15px rgb(255, 0, 0);
   }
@@ -386,65 +375,61 @@ footer {
   }
 }
 
+
 /* Tablet */
 
-@media (min-width: 721px) and (max-width: 1200px) {
+@media (min-width: 801px) and (max-width: 1200px) {
 
-  nav {
-    height: fit-content;
+  * {
+    border: 1px solid red;
+  }
+  .nav {
+    height: 110px;
     padding: 0;
   }
 
   .left-menu {
-    width: 20%;
-    text-align: center;
+    width: 22%;
     box-shadow: inset 0px 0px 10px 2px var(--main-font-color);
-    padding: 15px;    
-  }
-
-  .left-menu li {
-    text-align: center;
   }
 
   .right-menu {
     width: 75%;
-    margin-right: 10px;  
+    overflow: hidden;
   }
   
-  .right-menu li {
-    width: min-content;    
-    margin-top: 5px;
-    text-align: center;    
+  .right-menu ul{    
+    margin: 0;
   }
 
-  nav button {
+  .nav button {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: transparent;
-    border-radius: 25px 5px; 
+    background-color: transparent;    
     font-weight: bolder;
-    font-size: 0.7em;  
-    padding: 22px;
+    font-size: 0.8em;  
   }
 
-  .left-menu button {
-    width: 30px;
-    margin: 10px 0;
-    height: 50px;
+  .nav .left-menu button {
+    width: 80%; 
+    height: 80px;
   }
 
   .right-menu button {
     width: 80px;
-    margin: 10px;    
-    padding: 20px;
+    height: 60px;    
+    padding: 10px;
   }
 
   .left-menu button:active {
     box-shadow: inset 0px 0px 15px 0px var(--main-font-color)
   }
 
-  nav ul {
-    width: 100%;
+  .nav ul {    
     list-style: none;
+  }
+
+  .nav ul li {    
+    height: 100%;
   }
 
   main {
@@ -460,7 +445,7 @@ footer {
   h1 {
     font-size: 1.5em;
   }
-  
+
   #about h2,
   h3 {
     font-size: 1em;
