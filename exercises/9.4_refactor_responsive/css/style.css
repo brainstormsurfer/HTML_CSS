@@ -13,12 +13,16 @@
   box-sizing: border-box;
   text-align: center;
   color: var(--main-font-color);
+  font-size: 20px;
 }
 
+h1, h2, h3, h4 {
+  font-size: 1.5em;
+}
 .nav {
   position: sticky;
   top: 0;
-  height: 80px;
+  height: 100px;
   overflow: hidden;
   z-index: 1;
   box-shadow: inset 0px 0px 100px 0px #000;
@@ -103,59 +107,72 @@ main {
   width: 100%;
   display: inline-block;
   text-align: center;
-  padding: 20px;
+  padding: 150px 10px;
 }
 
 .hero {
-  float:left;
+  float:right;
   width: 40%;
   min-width: min-content;
-  vertical-align: middle;
+  vertical-align: middle;  
 }
 
 #img_hero {
-  width: 350px;
+  width: 450px;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 10px var(--main-font-color);
-  margin: 10px 0 10px;
+  margin: 30px 0 ;
   max-width: min-content;
 }
 
-.hero #h3-img_desc {
+#img_desc {
   border-radius: 25px;
   box-shadow: inset 0px 0px 55px var(--box-primary-color);
-  height: 80px;
-  width: 60%;
+  height: 95px;
+  width: 80%;
   padding: 1em;
   min-width: 350px;
   margin: 10px auto;
+  font-size: 1.2em;
 }
 
-#h3-img_desc:hover {
+#img_desc:hover {
   box-shadow: inset 0px 0px 55px var(--box-hover-color);
 }
 
+#img_hero:active {
+  box-shadow: 0px 0px 15px 15px rgb(255, 0, 0); 
+}
+
 .about {
-  float: right;
-  border-radius: 25px;
-  font-size: 1.2em;
-  width: 45%;
-  min-width: 350px;
-  vertical-align: middle;
-  min-height: max-content;
+  float: left;  
+  vertical-align: middle;  
+  width: 48%;
+  height: 650px;
+  line-height: 1.5;
+  min-width: 350px;    
   padding: 1em;
+  margin: 0 100px;
 }
 
 .about,
 .about-adams {
+  border-radius: 25px;
   box-shadow: inset 0px 0px 65px var(--box-primary-color);
+  height: min-content;
 }
 
 .about-adams {
-  margin-top: 30px;
-  width: 100%;
+  margin-top: 60px;
   min-width: 150px;
-  padding: 10px;
+  padding: 45px;
+}
+.about p , span {
+  font-size: .95em;
+}
+.about-adams p {  
+  /* font-size: 1.5em; */
+  margin-bottom: 10px;
 }
 
 .about:hover {
@@ -174,30 +191,40 @@ main {
   box-shadow: inset 0px 0px 65px var(--box-hover-color);
 }
 
-.about p {
-  width: 100%;
-  display: inline-block;
-  margin-top: 10px;
-  z-index: 1;
-}
 
-.sp-adams {
+.sp-adams{
+  font-weight: bold;  
   border: 1px solid transparent;
   box-shadow: 0px 0px 40px 10px transparent;
 }
 
-#img_hero:active {
-  box-shadow: 0px 0px 15px 15px rgb(255, 0, 0);
-}
 
 .sp-adams:hover {
   position: relative;
   padding: 15px;
-  box-shadow: 0px 0px 40px 20px rgb(255, 0, 0);
+  box-shadow: 0px 0px 40px 23px rgb(255, 0, 0);
   color: red;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 1.5em;
+  font-style: italic;
+  border: 3.5px red dashed;
   border-radius: 50%;
+  cursor: wait;
+}
+
+#sp-answer {  
+  border-radius: 50%;
+}
+
+#sp-answer:hover {  
+  cursor: help;
+}
+
+#sp-answer:active {  
+  border: 5px rgb(250, 129, 0) none;
+  color: rgb(255, 145, 0);
+  box-shadow: 0px 0px 100px 100px rgb(255, 162, 0);  
+  cursor: help;
 }
 
 .hr {
@@ -249,7 +276,6 @@ footer {
 @media only screen and (max-width: 800px) {
   * {
     font: 0.5rem;
-    border: 1px red solid;
   }
 
   .nav {
@@ -312,10 +338,6 @@ footer {
     margin: 15px 0;
   }
 
-  .hero {
-    display: block;
-  }
-
   h1 {
     font-size: 1.5em;
   }
@@ -344,7 +366,7 @@ footer {
     box-shadow: 0px 0px 15px 15px rgb(255, 0, 0);
   }
 
-  .hero #h3-img_desc {
+ #img_desc {
     border-radius: 25px;
     box-shadow: inset 0px 0px 55px var(--box-primary-color);
     height: 80px;
@@ -354,11 +376,11 @@ footer {
     margin: 10px auto;
   }
 
-  #h3-img_desc:hover {
+  #img_desc:hover {
     box-shadow: inset 0px 0px 55px var(--box-hover-color);
   }
 
-  .about {
+  .left {
     display: block;
     border-radius: 25px;
     font-size: 1.1em;
@@ -380,9 +402,6 @@ footer {
 
 @media (min-width: 801px) and (max-width: 1200px) {
 
-  * {
-    border: 1px solid red;
-  }
   .nav {
     height: 110px;
     padding: 0;
@@ -437,11 +456,7 @@ footer {
     text-align: center;
     margin: 15px 0;
   }
-
-  .hero {
-    display: block;
-  }
-
+  
   h1 {
     font-size: 1.5em;
   }
@@ -470,7 +485,7 @@ footer {
     box-shadow: 0px 0px 15px 15px rgb(255, 0, 0);
   }
 
-  .hero #h3-img_desc {
+ #img_desc {
     border-radius: 25px;
     box-shadow: inset 0px 0px 55px var(--box-primary-color);
     height: 80px;
@@ -480,11 +495,11 @@ footer {
     margin: 10px auto;
   }
 
-  #h3-img_desc:hover {
+  #img_desc:hover {
     box-shadow: inset 0px 0px 55px var(--box-hover-color);
   }
 
-  .about {
+  .left {
     display: block;
     border-radius: 25px;
     font-size: 1.1em;

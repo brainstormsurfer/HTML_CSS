@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12.1_href_attribute</title>
+    <style>    
+    
+     a::after {
+            /* display: inline-block;         */
+           content: ' ('attr(href) ')';                      
+        }
+    a:link{
+        text-decoration: none;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        Please visit this
+        <a href="https://www.appleseeds.org.il/">website</a>
+        for more information.
+    </p>
+</body>
+</html>
