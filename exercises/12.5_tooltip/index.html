@@ -5,7 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12.5_tooltip</title>
 </head>
+<style>
+    .container {
+        width: 550px;
+        margin: 50px auto;        
+        white-space: justify;
+    }
+    p {
+        font-size: .9em;
+    }
+    a {
+        position: relative;       
+    }
+    a:hover::before {
+        position: absolute;
+        display: inline-block;
+        content: attr(data-value);
+        top: -23px;
+        left: 26px;
+        box-shadow: inset 0px 0px 15px 2px rgb(255, 0, 115);
+        border-radius: 25px;
+        width: 120px;
+        text-align: center;
+        height: min-content;
+        color:rgb(73, 12, 131);
+        font-weight: bolder;
+        font-size: .85em;        padding:2px 4px;        
+        background-color: rgb(229, 255, 112);
+    }
+
+    a:hover::after {
+        position: absolute;
+        content: "";
+        top: -17px;
+        left: 35px;
+        border: .25px solid rgb(236, 46, 147);
+        box-shadow: inset 0px 0px 10px 0px orange;
+        display: inline-block;        
+        width: 16px;
+        text-align: center;
+        height: 16px;
+        font-size: 1em;
+        transform: rotate(60deg);
+        background-color: rgb(255, 0, 166);
+        z-index: -1;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+</style>
+
 <body>
-    
+    <div class="container">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates ullam nostrum, fugiat, sed ipsam aliquam facilis perferendis laudantium asperiores id in repellendus consectetur aspernatur neque doloribus velit quidem nesciunt. Ab iste rem nihil aspernatur provident? Nemo nam nihil voluptate iusto cum? Expedita, esse. Voluptate eveniet possimus maiores mollitia. Atque laudantium quas rerum, sunt, velit odio aliquam corporis tempora optio reiciendis rem nam iure nostrum neque consequatur voluptatum aperiam mollitia! Nesciunt veniam ad eveniet iusto vel excepturi, asperiores laboriosam ea doloremque assumenda! Inventore quae ratione voluptas temporibus at voluptatum illo repudiandae quis vero, dolore vel maiores accusantium nemo. Est, in dolorum.    
+    Dolorem earum, at, provident numquam veniam vitae accusamus dolore, recusandae excepturi mollitia totam! Dolore repudiandae tempore, magnam neque omnis excepturi doloremque sint veritatis nam in explicabo, praesentium quidem iste eaque, tempora pariatur! Dignissimos iste a voluptate ut consequatur totam sint.
+    </p>
+<br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia aliquam dolores molestiae culpa recusandae facilis, placeat rem, accusamus ullam consequatur at tempora! Aliquid inventore reprehenderit voluptas minima et ullam explicabo hic ex. Tempore doloremque quis deserunt laborum <a href="#" data-value='"accu"-what now?!'>accusamus</a> qui nostrum inventore, voluptate animi et, laudantium optio dolorum culpa minus vitae molestias a, unde blanditiis minima. Dolorum quaerat nesciunt ducimus voluptates a et, dignissimos eligendi ab. Sint accusamus reiciendis non nesciunt, libero quibusdam animi eaque omnis veniam, eius adipisci ipsam. Error, ullam iusto possimus amet commodi itaque vel ab consectetur, exercitationem quo natus beatae officiis voluptas dicta nostrum quod quam doloremque.  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nisi sint rem illo accusantium impedit aperiam. Inventore laborum accusantium commodi, alias, hic officiis ut possimus consequuntur error, harum nulla? Tempore molestias expedita animi, cupiditate odio, doloribus ratione quasi temporibus esse fugit incidunt vel asperiores tenetur quae aut dolore alias sint.  </p>
+</div>
 </body>
 </html>
