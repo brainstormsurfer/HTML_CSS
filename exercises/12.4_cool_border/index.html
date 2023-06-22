@@ -39,7 +39,7 @@
 
     p::before {
         position: absolute;
-        content: attr(data-value);
+        content: attr(data-value) ' Border';
         top:20px;
         left:30px;
         z-index: 1;
@@ -51,7 +51,7 @@
 <body>
     <div class="outer">
         <div class="inner">
-            <p data-value='Cool Border'></p>
+            <p data-value='Cool'></p>
         </div>
     </div>    
 </body>

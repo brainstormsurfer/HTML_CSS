@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+      :root {
+        --main-font-color: greenyellow;
+        --box-primary-color: #00c3ff;
+        --box-hover-color: #ea00ff;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+        text-align: center;
+        color: var(--main-font-color);
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        height: 80px;
+        padding: 0 25px;
+        overflow: hidden;
+        z-index: 1;        
+        box-shadow: inset 0px 0px 100px 0px #000;
+      }
+
+      .left-menu {
+        float: left;
+        text-align: start;
+        width: 20%;
+      }
+
+      .right-menu {
+        float: right;
+        text-align: end;
+        width: 70%;
+      }
+
+      nav button {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: transparent;
+        border-radius: 25px 5px;
+        padding: 20px 25px;
+        box-shadow: inset 0px 0px 20px 0px var(--box-primary-color);
+        font-weight: bolder;
+        margin: 15px;
+      }
+
+      nav .left-menu button {
+        padding: 20px 55px;
+      }
+
+      nav button:hover {
+        border-radius: 5px 25px;
+        box-shadow: inset 0px 0px 22px 0px var(--box-hover-color);
+        cursor: pointer;
+      }
+
+      nav button:active {
+        box-shadow: 0px 0px 10px 2px var(--main-font-color);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        display: inline-block;
+        overflow: hidden;
+      }
+
+      .sp_primary {
+        color: var(--box-primary-color);
+      }
+
+      .sp_secondary {
+        color: var(--box-hover-color);
+      }
+
+      .bg-container {
+        width: 100%;
+        padding-top: 10px;
+        min-width: fit-content;
+      }
+
+      .bg-container::before {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../img/treeisland.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: grayscale(90%);
+        z-index: -1;
+      }
+
+      main {
+        width: 100%;
+        min-width: 350px;
+        display: inline-block;        
+        padding: 20px;
+      }
+
+      .hero {
+        display: inline-block;
+        width: 40%;        
+        min-width: min-content;
+        vertical-align: middle;
+        margin-right: calc(10% - 50px);        
+      }
+
+      #img_hero {
+        width: 350px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 10px 10px var(--main-font-color);
+        margin: 10px 0 10px;
+        cursor: no-drop;
+      }
+
+      .hero #h3-img_desc {
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 55px var(--box-primary-color);
+        height: 80px;
+        width: 60%;
+        padding: 1em;
+        min-width: 350px;
+        margin: 10px auto;
+      }
+
+      #h3-img_desc:hover {
+        box-shadow: inset 0px 0px 55px var(--box-hover-color);
+      }
+
+      .about {          
+        display: inline-block;
+        border-radius: 25px;
+        font-size: 1.2em;
+        width: 45%;              
+        min-width: 350px;
+        vertical-align: middle;        
+        min-height: max-content;
+        padding: 1em;
+        margin-right: calc(10% - 50px);        
+      }
+
+      .about, .about-adams {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+      }
+      
+       .about-adams {     
+        margin-top: 30px;
+        width: 100%;
+        min-width: 150px;
+        padding: 10px;    
+        margin-right: 50%;       
+      }
+
+      .about:hover {
+        box-shadow: inset 0px 0px 65px var(--box-hover-color);
+      }
+
+      .about > .about-adams:hover {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+        cursor: pointer;
+      }
+      
+      .about:active {
+        box-shadow: inset 0px 0px 65px var(--box-primary-color);
+      }
+
+      .about > .about-adams:active {
+        box-shadow: inset 0px 0px 65px var(--box-hover-color);
+      }
+
+      .about p {
+        width: 100%;
+        display: inline-block;
+        margin-top: 10px;
+        z-index: 1;
+      }
+
+      #img_hero:active { 
+        box-shadow: 0px 0px 25px 15px rgb(255, 0, 0);
+      }
+   
+      .sp-adams {
+        border: 1px solid transparent;
+        box-shadow: 0px 0px 40px 10px transparent;
+        color: --main-font-color;
+        font-weight: bold;        
+      }
+      
+      .sp-adams:hover  {  
+        font-style: italic;
+        border: 4px red dashed;
+        box-shadow: 0px 0px 45px 25px rgb(255, 0, 0);
+        color: red;
+        font-size: 25px;
+        border-radius: 50%;   
+        cursor:wait;     
+        padding: 15px;
+      }
+
+      .hr {
+        margin: 30px;
+        color: var(--box-hover-color);
+      }
+
+      
+      footer {    
+        text-align: center;
+        padding: 20px;
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 85px var(--box-primary-color);
+        width: calc(max(100% - 17%, 350px));
+        margin: 20px auto;
+        font-style: italic;
+        font-size: 1.1em;
+      }  
+
+      footer:hover {
+        border-radius: 25px;
+        box-shadow: inset 0px 0px 85px var(--box-hover-color);
+      }
+      
+      footer ul {
+        max-width: 100%;
+        margin-top: 15px;
+      }
+
+      footer li {
+        display: inline-block;
+        max-width: 100%;
+      }
+
+      i {
+        margin: 10px 15px;
+        color: var(--main-font-color);
+      }
+
+      i:hover {
+        color: var(--box-hover-color);
+        cursor: pointer;
+      }
+
+      footer i:active {
+        color: var(--box-primary-color);
+      }
+
+     
