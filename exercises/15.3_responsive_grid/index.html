@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.3_grid_basics_3</title>
+</head>
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+        body {
+        padding: 20px;
+        font-size: 24px;
+        font-weight: bolder;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color:#fff;
+        height: 100vh;
+        display:grid;
+        gap: .8em;
+
+        grid-template-areas:
+        'header header header'
+        'nav content sidebar'
+        'footer footer footer'
+        }
+    
+    header, nav, main, aside, footer {
+        padding: 20px;        
+        background-color: rgb(255, 72, 0);
+        border-radius: 20px;
+        box-shadow: inset 0px -10px 70px 0px #fff;
+      }
+
+      header {
+        grid-area: header;
+        background: rgb(176, 13, 194);
+      }
+      nav {
+        grid-area: nav;
+        background: rgb(102, 25, 147);
+      }
+      
+      main {
+        grid-area: content;
+        background: rgb(144, 16, 199);
+      }
+      
+      aside {
+        grid-area: sidebar;
+        background: rgb(96, 1, 168);
+      }
+      
+      footer {
+        grid-area: footer;
+        background: rgb(116, 0, 116);
+      }
+
+/* SMARTPHONE */ 
+@media only screen and (max-width: 670px) {
+
+  body {
+       gap: .8em;
+        grid-template-areas:
+        'header'
+        'nav'
+        'content'
+        'sidebar'
+        'footer'
+        }      
+}
+
+/* TABLET */ 
+@media screen and (min-width: 671px) and (max-width: 1200px) {
+body {       
+      grid-template-areas:
+      'header header'
+      'nav content'              
+      'nav content'              
+      'sidebar sidebar'
+      'footer footer'
+      }
+      grid-template-columns: 2fr;
+      grid-template-rows: 1fr 2fr 1fr;
+      
+
+}
+</style>
+</head>
+
+<body>
+        <header>Header</header>
+        <nav>Navbar</nav>
+        <main>Content<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, placeat!</main>
+        <aside>Sidebar</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
