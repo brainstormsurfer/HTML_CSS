@@ -6,9 +6,33 @@
     <title>14.1_simple_transition</title>
     <style>
 
+        div {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            background-color: rgb(42, 3, 101);
+        }
+        
+        div::after {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            height: 100%;
+            width: 0%;
+            content: "";            
+            transition-duration: 1.5s;
+            background-color: rgb(134, 134, 252);
+        }
+
+        div:hover::after {        
+            width: 100%;
+            left: 0;
+        }
+
+
     </style>
 </head>
 <body>    
-    <div class="box"></div>
+    <div></div>
 </body>
 </html>
