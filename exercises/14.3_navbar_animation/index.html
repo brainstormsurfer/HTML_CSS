@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14.3_navbar_animation</title>
+    <style> 
+        .container {            
+            display: flex;
+            justify-content: center;        
+            align-items: center;
+            height: 50px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;   
+            background-color: #d7d7d7;         
+        }
+
+        ul {
+            display: flex;
+            list-style: none;            
+            gap: 1em;
+        }
+
+        li {
+            position: relative;         
+            padding: 3px;
+        }
+
+        li::after {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: transparent;        
+            transition-timing-function: ease-in-out;
+            transition-duration: .5s;
+            border-bottom: 2px solid #000;           
+        }
+
+        li:hover::after {        
+            width: 100%; 
+        }
+
+        li::before {
+            position: absolute;
+            content: "";
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 100%;
+            background-color: transparent;
+            transition-timing-function: ease-in-out;
+            transition-duration: .5s;
+            border-top: 2px solid #000;
+        }
+
+        li:hover::before {  
+            left: 0%;
+            width: 100%;
+        }
+        </style>
 </head>
+
 <body>
-    
+    <nav class="container">
+    <ul>
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Portfolio</li>
+    <li>Contact</li>
+</ul>
+</nav>
 </body>
 </html>
