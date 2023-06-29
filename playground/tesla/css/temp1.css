@@ -1,0 +1,204 @@
+@font-face{font-family:Gotham SSm;font-weight:700;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Bold_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:500;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:400;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Book_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:300;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Light_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:200;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-XLight_Web.woff2)}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    border: .5px red solid;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gotham SSm', Arial, Helvetica, sans-serif;  
+    color: #fff;
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Model-3-Main-Hero-Desktop-LHD');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vmin;
+    width: 100%;
+}
+
+
+ol {
+    list-style: none;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+}
+
+.navbar .left {
+    display: flex;
+    flex:  0 0 20%;
+}
+  
+ .logo {
+    max-width: 120px;
+    margin-left: 20%;
+  }
+  
+  .navbar .left .logo a {
+    display: block;
+  }
+  
+  .navbar .left .logo svg {
+    width: 100%; 
+  }
+
+  /*    CENTER IS GOOD */
+  .navbar .center {
+    flex:  0 0 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+  }
+  
+  .navbar .center ol {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+/*   
+  .navbar .center ol li {
+    display: flex;        
+    margin-right: 10px; 
+  } */
+  .navbar .right {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .navbar .right ol {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* flex: 1; */
+  }
+  
+  .navbar .right ol li {
+    display: flex;
+    justify-content: space-between;
+    /* flex: 1; */
+    margin-right: 10px;
+  }
+  /* .navbar .right {
+    display: flex;
+    flex:  0 0 20%;
+    flex:1;
+    justify-content: space-between;
+  }
+  
+  .navbar .right ol {
+    display: flex;
+    flex: 1;
+    flex:  0 0 20%;
+    justify-content: space-between;
+    justify-content: flex-end; 
+    align-items: center;
+  } */
+  
+  /* .navbar .right ol li {
+    display: flex;
+    justify-content: space-between; */
+    /* justify-content: end; */
+    /* flex: 1; */
+
+    
+    /* align-items: center;     */
+  /* } */
+     /* Adjust the v
+  }
+
+/* li {    
+    margin: 20px;
+    will actually work, not like the following:
+} */
+
+
+
+
+.navbar a {
+    /* display: flex; */
+    font-size: 12px;
+    margin: 10px;
+    white-space: nowrap;
+}
+
+.showcase {
+    padding-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcase h1 {
+    font-size: 2em ;
+    font-weight: 500;
+}
+
+.showcase a {
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.info {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;    
+}
+
+.info ol {
+   
+    display: flex;
+    justify-content: center;    
+    flex: 1;
+}
+
+
+/* TRY TO COLLAPSE CENTER LI BY AN ENTIRE ELEMENT */
+
+
+  
+  .navbar ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjust the column width as needed */
+    gap: 2em;
+  }
+  
+  .navbar ol li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+/* .navbar ol li.visible {
+  visibility: visible; 
+/* }  */

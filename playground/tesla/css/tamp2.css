@@ -1,0 +1,136 @@
+@font-face{font-family:Gotham SSm;font-weight:700;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Bold_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:500;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Medium_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:400;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Book_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:300;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-Light_Web.woff2) format("woff2")}@font-face{font-family:Gotham SSm;font-weight:200;font-display:swap;font-style:normal;src:url(https://cdn-design.tesla.com/tds-fonts/x/woff2/GothamSSm-XLight_Web.woff2)}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    border: .5px red solid;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gotham SSm', Arial, Helvetica, sans-serif;  
+    color: #fff;
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Model-3-Main-Hero-Desktop-LHD');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vmin;
+    width: 100%;
+}
+
+ol {
+    list-style: none;
+}
+
+a, a:link {
+    text-decoration: none;
+    color: #fff;
+}
+
+img {
+    width: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
+}
+
+.navbar .left {  
+    display: flex; 
+    align-items: center;
+    background-color: green;
+    /* flex-basis: 150px; */
+    flex-shrink: 0;
+    padding-left: 2em;
+}
+
+.navbar .logo {  
+    max-width: 120px;  
+    padding-right: 1em; 
+    /* flex-basis: 20%;  */
+    /* margin-right: 2em;    */
+}
+
+.navbar .center {  
+    display: flex; 
+    justify-content: center;
+    align-items: center;      
+    background-color: rgb(38, 0, 255);
+    padding: 0 1em;
+    /* flex-grow: 1; */
+    /* overflow: hidden; */
+    /* min-width: 100px; */
+    /* white-space: wrap; */
+    /* flex-wrap: wrap;  */
+    /* max-width: fit-content; */
+}
+
+.navbar .center ol {        
+    display: flex;        
+    background-color: rgb(38, 0, 255);    
+    /* flex-wrap: wrap; */
+    gap: 2em;
+    /* margin: 0 1em;     */
+    /* white-space: wrap;    */
+    /* white-space:break-spaces;     */
+}
+
+.navbar .center ol li {        
+    /* flex-grow: 1;*/
+    flex-shrink: 0;
+     
+     min-width: max-content;
+    /* overflow: hidden; */
+}
+
+.navbar .right {        
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;      
+    background-color: orange;
+    padding: 0 2em;
+}
+
+.navbar .right ol {
+    display: flex;
+    gap: 2em;
+}
+
+.navbar .right ol li {        
+    background-color: rgb(200, 0, 255);    
+    flex-shrink: 1;
+}
+
+  
+  .navbar .left .logo svg {
+    width: 100%; 
+  }
+
+  .left, .left .logo {
+    display: flex;
+  }
+
+  .left .logo  {
+    flex: 1;
+  }
+
+  
+@media screen and (max-width: 1220px) {
+    .navbar .center > ol {
+        display: none;
+    }
+    .navbar .right ol li:not(:last-child) {
+        display: none;
+      }
+
+}
+  

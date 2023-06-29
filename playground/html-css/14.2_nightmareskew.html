@@ -18,7 +18,7 @@
       justify-content: center;
       align-items: center;
       width: 550px;
-      /* gap: 1.5em; */
+      /* gap: 2em; */
       flex-wrap: wrap;
     }
 
@@ -38,8 +38,8 @@
         position: relative;
         font-family: Georgia, "Times New Roman", Times, serif;
         font-size: 20px;
-        height: 70px;
         padding: 20px 30px;
+        /* border: 3px solid #000; */
         background-color: transparent;
         overflow: hidden;
         }
@@ -52,7 +52,7 @@
       border: 1px solid transparent;
       position: absolute;
       content: "Cool!";
-      top: -104%;
+      top: -102%;
       left: 0;
       width: 100%;
       height: 100%;  
@@ -112,6 +112,43 @@
       transform: rotate(0deg);
     }
 
+    /* #skew::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-duration: 2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skew:hover::after {
+    border: #000 3px solid;
+    background-color: rgb(255, 0, 204);    
+    transform: skew(45deg); 
+} */
+
+    /* #skew::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition-duration: 1s;
+    background-color: rgb(255, 22, 189);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#skew:hover::before {
+    border: #000 3px solid;
+    transform: skewX(45deg); 
+} */
 
     #scale { 
         border: #000 3px solid;
@@ -161,60 +198,110 @@
       color: #fff;
       z-index: 2;
     }
+/* 
+    #skew {
+      position: relative;
+      padding: 20px;
+      background-color: transparent;
+      border: transparent;
+      transform: skewX(0deg);
+      transition: transform 0.3s;
+      overflow: visible;
+    }
+
+    #skew::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: skewX(0deg); 
+      z-index: 0;
+      display: flex;
+      transition-duration: 2s;
+      justify-content: center;
+      align-items: center;
+      outline: #000 3px solid;
+    }
+
+    #skew:hover::before {
+      transform: skewX(-25deg);
+    }
+
+    #skew::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(243, 0, 166);
+      transform: skewY(90deg); 
+      transition-duration: 2s;
+      transition-timing-function: ease-in-out;
+    }
+
+    #skew:hover::after {
+      transform: skewY(0deg) skewX(45deg);
+    } */
+
+
 
     .content {    
         overflow: hidden;
-        width: 160px;
+        max-width: min-content;
+        max-height: min-content;
+        /* padding-bottom: 15px; */
+        border: 2px red solid;
     }
 
     #skew {
+    position: relative; /* Add position relative */
     padding: 23px 40px;
-    margin-left: 14px;
+    /* margin-bottom: 3px; */
     overflow: visible;
+    z-index: 0; /* Add z-index to keep it above the ::before pseudo-element */
+
 }
 
 #skew::before {
   position: absolute;
-  content:"" ;
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgb(243, 0, 166);
   transform: skewY(360deg) skewX(270deg);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   z-index: -2;
 }
 
-#skew:hover::before {  
+#skew:hover::before {
   transform: skewY(0deg) skewX(-25deg);
-  z-index: 1;  
+  height: 105%;
+  width: 105%;
 }
 
 #skew::after {
   position: absolute;
-  content: attr(href);
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: skewX(0deg);
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   border: 3px solid #000;
-  outline: 20px solid #d7d7d7;
   box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;  
+z-index: -2;
 }
 
         #skew:hover::after {
-            transform: skewX(-25deg);
-            content: attr(href)"Cool!";
-            z-index: 3;
+            transform: skewX(-25deg);  
         }
         
   </style>
@@ -225,7 +312,7 @@
       <button id="rotate">Rotate</button>
       <button id="scale">Scale</button>
       <div class="content">
-        <button id="skew" href="">Skew</button>
+        <button id="skew">Skew</button>
       </div>
     </div>
   </body>
