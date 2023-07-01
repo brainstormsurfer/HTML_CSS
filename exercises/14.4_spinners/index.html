@@ -1,11 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>14.4_spinners</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #000;
+    }
+
+    .container {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 800px;
+      height: 800px;
+    }
+
+    @keyframes spin-main {
+      0% {
+        box-shadow: -3px 3px 5px 0px aqua;
+      }
+      20% {
+        box-shadow: -1px 3px 5px rgb(229, 255, 0);
+      }
+      40% {
+        box-shadow: 2px 3px 5px rgb(255, 166, 0);
+      }
+      60% {
+        box-shadow: -5px 3px 5px rgb(255, 0, 191);
+      }
+      80% {
+        box-shadow: 5px 3px 5px rgb(157, 0, 255);
+      }
+      100% {
+        box-shadow: -3px 3px 5px  aqua;
+      }
+    }
+
+    .container::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 5px;
+      left: 5px;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px 3px rgb(125, 125, 125);
+      animation: spin-main 3s linear infinite;
+    }
+
+    div {
+      align-items: center;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      margin: 25px;
+    }
+
+    .spin-1 {
+      position: relative;
+      border-radius: 50%;
+      background-color: rgb(0, 0, 0);
+      border-color: #888;
+      border-top-color: rgb(0, 255, 170);
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 50%;
+      animation: spin1 .7s linear infinite;
+    }
+
+    @keyframes spin1 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-2 {
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(-90deg, red, rgb(1, 1, 80));
+      animation: spin2 .85s linear infinite;
+      box-shadow: 7px 0px 5px rgb(251, 255, 0);
+    }
+
+    .spin-2::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 7px;
+      left: 3px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+
+    @keyframes spin2 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-3 {
+      margin-right: 150px;
+      position: relative;
+      border-radius: 50%;
+      background-color: #888;
+      width: 30px;
+      height: 30px;
+      animation: 1.25s spin3-1 ease-in-out infinite;
+    }
+
+    .spin-3::after {
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      top: -1px;
+      left: 200%;
+      background-color: #888;
+      animation: 1.25s spin3-2 ease-in-out infinite;
+    }
+
+    .spin-3::before {
+      align-items: center;
+      position: absolute;
+      content: "";
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      top: -1px;
+      left: 400%;
+      background-color: #888;
+      animation: 1.25s spin3-3 ease-out infinite;
+    }
+
+    @keyframes spin3-1 {
+      20% {
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+      }
+      40% {
+        background-color: #888;
+      }
+      60% {
+        background-color: #888;
+      }
+      80% {
+        background-color: #888;
+      }
+      100% {
+        background-color: #888;
+      }
+    }
+
+    @keyframes spin3-2 {
+      20% {
+        background-color: #888;
+      }
+
+      40% {
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+      }
+      60% {
+        background-color: #888;
+      }
+      80% {
+        background-color: #888;
+      }
+      100% {
+        background-color: #888;
+      }
+    }
+
+    @keyframes spin3-3 {
+      20% {
+        background-color: #888;
+      }
+      40% {
+        background-color: #888;
+      }
+      60% {
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+      }
+      80% {
+        background-color: #888;
+      }
+      100% {
+        background-color: #888;
+      }
+    }
+
+    .content {
+      display: flex;
+      width: 250px;
+      justify-content: center;      
+  }
+
+    .spin-4-1 {      
+      border-radius: 50%;
+      background-color: rgb(0, 255, 170);
+      width: 30px;
+      height: 30px;
+      margin-right: 0px;
+      animation: 1.25s spin4-1 ease-in-out infinite;
+    }
+    .spin-4-2 {
+      border-radius: 50%;
+      background-color: rgb(0, 255, 170);
+      width: 30px;
+      height: 30px;
+      margin-right: 0px;
+      animation: 1.25s spin4-2 ease-in-out infinite;
+    }
+    .spin-4-3 {
+      border-radius: 50%;
+      background-color: rgb(0, 255, 170);
+      width: 30px;
+      height: 30px;
+      animation: 1.25s spin4-3 ease-in-out infinite;
+    }
+
+    @keyframes spin4-1 {
+      0% {
+        transform: scale(0);
+      }
+      20% {
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+        transform: scale(1);
+      }
+      80% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @keyframes spin4-2 {
+      0% {
+        transform: scale(0);
+      }     
+      20% {
+        transform: scale(0);
+      }
+      40% {   
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+        transform: scale(1);
+      }
+      
+      100% {
+        transform: scale(0);
+      }
+    }
+
+    @keyframes spin4-3 {
+        0% {
+        transform: scale(0);
+      }
+      20% {
+        transform: scale(0);
+      }
+      40% {
+        transform: scale(0);
+      }
+      60% {   
+        background-color: rgb(0, 255, 170);
+        box-shadow: 0px 0px 10px 1px #fff;
+        transform: scale(1);
+      }
+      100% {
+        transform: scale(0);
+      }
+    }
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="spin-1"></div>
+      <div class="spin-2"></div>
+      <div class="content">
+      <div class="spin-3"></div>
+    </div>
+      <div class="content">
+        <div class="spin-4-1"></div>
+        <div class="spin-4-2"></div>
+        <div class="spin-4-3"></div>
+      </div>
+    </div>
+  </body>
 </html>
