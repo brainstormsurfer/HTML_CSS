@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>14.4_spinners</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      /* display: flex;         */
+      margin: 100px auto;
+      width: 100%;
+      height: 100vh;
+      padding: 50px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;    
+      justify-content: space-around;
+      background-color: #000;
+      gap: 50px;      
+      padding: 50px;
+      width: 100%;
+      height: fit-content;
+    }
+
+    div {
+      align-items: center;
+      display: flex;
+      width: 200px;
+      height: 300px;
+ 
+      background-color: rgb(186, 186, 186);
+      /* border: 3px #888 solid;     */
+    }
+
+    .spin-1 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      min-width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: rgb(0, 0, 0);
+      border-color: #888;
+      border-top-color: aqua;
+      border-width: 10px;
+      border-style: solid;
+      border-radius: 50%;
+      animation: spin1 1s linear infinite;
+    }
+
+    @keyframes spin1 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-2 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      /* min-width: 100px; */
+      height: 100px;
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      /* border-radius: 50%; */      
+      /* border-color: #888;
+        border-width: 5px;
+        border-style: solid; */
+      border-radius: 50%;        
+      animation: spin2 5s linear infinite;
+    }
+
+    .spin-2::after {      
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 80%;
+      left: 10px;
+      top: 10px;
+     outline-color: #888;
+      border-width: 5px;
+      border-style: solid;
+      /* border-radius: 50%;   */
+
+      /* border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%; */
+      background-color: rgb(186, 186, 186);
+    }
+
+@keyframes spin2 {
+    to {    
+      /* background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));       */
+      border: ;
+      transform: rotate(360deg);
+    }
+    25% {
+        /* transform: translate(100%, 0); */
+    }
+    50% {
+        /* /* transform: translateX(100%, 0); */ 
+    }
+    75% {
+        /* /* transform: translate(100%, 100%); */ 
+    }
+    100% {
+
+    }
+    
+}
+
+.spin-3 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      /* min-width: 100px; */
+      height: 100px;
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      /* border-radius: 50%; */      
+      /* border-color: #888;
+        border-width: 5px;
+        border-style: solid; */
+      border-radius: 50%;        
+      animation: spin2 5s linear infinite;
+    }
+
+    .spin-3::after {      
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 80%;
+      left: 10px;
+      top: 10px;
+     outline-color: #888;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;  
+
+      /* border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%; */
+      background-color: rgb(186, 186, 186);
+    }
+
+@keyframes spin3 {
+    to {    
+      /* background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));       */      
+      transform: rotate(360deg);
+    }
+    25% {
+        /* transform: translate(100%, 0); */
+    }
+    50% {
+        /* /* transform: translateX(100%, 0); */ 
+    }
+    75% {
+        /* /* transform: translate(100%, 100%); */ 
+    }
+    100% {
+
+    }
+    
+}
+
+.spin-3 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      border-radius: 50%;        
+      animation: spin2 5s linear infinite;
+    }
+
+    .spin-3::after {      
+      position: absolute;
+      content: "";
+      height: 80%;
+      width: 80%;
+      left: 10px;
+      top: 10px;
+     outline-color: #888;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;  
+      background-color: rgb(186, 186, 186);
+    }
+    .spin-1 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      height: 100px;      
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      border-top-color: #000;
+      border-top-width: 10px;
+      border-top-style: solid;
+      animation: spin1 5s linear infinite;
+    }
+    
+    .spin-1::after {
+      position: absolute;
+      width: 100%;
+     content: "";
+      height: 100%;      
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      border-top-color: #000;
+      border-top-width: 10px;
+      border-top-style: solid;
+      animation: spin1 5s linear infinite;
+    }
+
+    @keyframes spin1 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+@keyframes spin3 {
+    to {    
+      transform: rotate(360deg);
+    }
+    
+}
+
+.spin-4 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+  
+      animation: spin4 5s linear infinite;
+    }
+
+    .spin-4::after {      
+      position: absolute;      
+      content: "";
+      height: 80%;
+      width: 80%;
+      left: 10px;
+      top: 10px;
+     outline-color: #888;
+      border-width: 5px;
+      border-style: solid;
+      border-radius: 50%;  
+
+      /* border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%; */
+      background-color: rgb(186, 186, 186);
+    }
+
+@keyframes spin4 {
+    to {    
+      /* background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));       */      
+      transform: rotate(360deg);
+    }
+    25% {
+        /* transform: translate(100%, 0); */
+    }
+    50% {
+        /* /* transform: translateX(100%, 0); */ 
+    }
+    75% {
+        /* /* transform: translate(100%, 100%); */ 
+    }
+    100% {
+
+    }
+    
+}
+
+    .spin-2 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      height: 100px;
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      box-shadow: 0px 0px 15px 0px #fff;
+      border-top-left-radius: 50%;      
+      animation: .3 spin2 1s linear infinite;
+    }
+
+    .spin-2::after {      
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      left: 5px;
+      top: 5px;           
+      border-top-left-radius: 50%;      
+      background-color: #000;
+    }
+
+@keyframes spin2 {
+    to {
+      transform: rotate(360deg);
+    }      
+}
+
+
+.spin-6 {
+      display: flex;
+      position: relative;
+      width: 100px;
+      /* min-width: 100px; */
+      height: 100px;      
+      /* background-color: rgb(0, 0, 0); */
+      background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80));
+      /* border-color: #888; */
+      border-top-color: #000;
+      /* border-top-color: hsl(100deg 50% 25% / 0.75); */      
+      border-top-width: 10px;
+      border-top-style: solid;
+      /* border-radius: 50%; */
+      animation: spin1 5s linear infinite;
+    }
+    
+    .spin-6::after {
+      position: absolute;
+      width: 100%;
+     content: "";
+      height: 100%;      
+      /* background-color: rgb(0, 0, 0); */
+      /* background-image: linear-gradient(to bottom, aqua, yellow, red, purple, rgb(1, 1, 80)); */
+      /* border-color: #888; */
+      border-top-color: #000;
+      /* border-top-color: hsl(100deg 50% 25% / 0.75); */      
+      border-top-width: 10px;
+      border-top-style: solid;
+      /* border-radius: 50%; */
+      animation: spin1 5s linear infinite;
+    }
+
+    @keyframes spin6 {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="spin-1"></div>
+      <div class="spin-2"></div>
+      <div class="spin-3"></div>
+      <div class="spin-4"></div>
+      <div class="spin-5"></div>
+      <div class="spin-6"></div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+Kind of Lame / Meh...
+
+    .spin-1 {
+        display: flex;
+        position: relative;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+
+    .spin-1::after{
+        position: absolute;
+        content: "";
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        animation: spin1 2s infinite linear;
+    }
+
+    @keyframes spin1 {
+        0% {
+            border-top: 4px solid aqua;
+        }
+
+        25% {
+            border-right: 4px solid rgb(234, 255, 0);
+
+        }
+
+        50% {
+            border-bottom: 4px solid rgb(30, 255, 0);
+
+        }
+
+        100% {
+            border-left: 4px solid rgb(255, 0, 234);
+        }
+    }
+
+ -->
