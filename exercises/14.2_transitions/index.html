@@ -170,27 +170,32 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(243, 0, 166);
-  transform: skewY(360deg) skewX(270deg);
-  transition-duration: .5s;
+  background: rgb(243, 0, 166);  
+  transform: skewY(360deg) skewX(270deg) scale(0);
+  transition-duration:.9s;
   transition-timing-function: ease-in-out;
   z-index: -2;
 }
 
 #skew:hover::before {  
-  transform: skewY(0deg) skewX(-25deg);
+  transform: skewY(0deg) skewX(-25deg) scale(1);
   z-index: 1;  
+  content: attr(href)"Cool!";
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #skew::after {
   position: absolute;
-  content: attr(href);
+  content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   transform: skewX(0deg);
   transition-duration: .5s;
+  transition-delay: 0.3s;
   transition-timing-function: ease-in-out;
   border: 3px solid #000;
   outline: 20px solid #d7d7d7;
@@ -203,7 +208,6 @@
 
         #skew:hover::after {
             transform: skewX(-25deg);
-            content: attr(href)"Cool!";
             z-index: 3;
         }
         
